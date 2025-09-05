@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./login.css"; // Assuming you have a CSS file for styling
-const Login = () => {
+const Login = (props) => {
     const [form, setForm] = useState({ username: "", password: "" });
     const [error, setError] = useState("");
 
@@ -18,6 +18,7 @@ const Login = () => {
         setError("");
         // Handle login logic here
         alert(`Logged in as ${form.username}`);
+        props.onSuccessLogin(); // Call this to notify App.jsx
     };
 
     return (
