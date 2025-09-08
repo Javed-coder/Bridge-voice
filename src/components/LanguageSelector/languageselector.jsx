@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./languageselector.css";
+import CallHistory from "../CallHistory/CallHistory";
+import Contacts from "../Contacts/contact";
 
 const languages = [
     { code: "en", name: "English" },
@@ -41,7 +43,7 @@ const LanguageSelector = ({ onSelect }) => {
             <div className="language-panel">
                 <h2 className="panel-title">Select Languages</h2>
                 <div className="input-group">
-                    <span className="label-red">Select NGO Language</span>
+                    <span className="label-blue">Select NGO Language</span>
                     <select value={ngoLang} onChange={handleNgoChange} className="dropdown">
                         {languages.map((lang) => (
                             <option key={lang.code} value={lang.code}>{lang.name}</option>
@@ -50,21 +52,25 @@ const LanguageSelector = ({ onSelect }) => {
                 </div>
                 <div className="input-group">
                     <span className="label-red">Suggested Pairings</span>
-                    <div className="suggested-pairing">
-                        <span>{suggestedNgo.flag}</span>
-                        <span className="bold-text">{suggestedNgo.name}</span>
-                        <span className="label-red">–</span>
-                        <span className="bold-text label-red">{suggestedRefugee.name}</span>
-                        <span className="arrow">&gt;</span>
-                    </div>
+                    <button className="button-client-call">Call to Client</button>
+                    
                 </div>
                 <button className="button-red">Proceed to Call</button>
+                <div className="suggested-pairing">
+                    <span>{suggestedNgo.flag}</span>
+                    <span className="bold-text">{suggestedNgo.name}</span>
+                    <span className="label-red">–</span>
+                    <span className="bold-text label-red">{suggestedRefugee.name}</span>
+                    <span className="arrow">&gt;</span>
+                </div>
+                <Contacts />
             </div>
 
             {/* Refugee Language Panel */}
             <div className="language-panel">
+                <h2 className="panel-title">Select Languages</h2>
                 <div className="input-group">
-                    <span className="label-blue">Select Retugee Language</span>
+                    <span className="label-blue">Select Refugee Language</span>
                     <select value={refugeeLang} onChange={handleRefugeeChange} className="dropdown">
                         {languages.map((lang) => (
                             <option key={lang.code} value={lang.code}>{lang.name}</option>
@@ -73,15 +79,15 @@ const LanguageSelector = ({ onSelect }) => {
                 </div>
                 <div className="input-group">
                     <span className="label-red">Suggested Pairings</span>
-                    <div className="suggested-pairing">
-                        <span className="suggestion-circle">F</span>
-                        <span className="bold-text">French</span>
-                        <label className="checkbox-label">
-                            <input type="checkbox" checked={frenchToggle} onChange={handleFrenchToggle} className="checkbox" />
-                        </label>
-                    </div>
                 </div>
-                <button className="button-blue">Proceee call</button>
+                <div className="suggested-pairing">
+                    <span className="suggestion-circle">F</span>
+                    <span className="bold-text">French</span>
+                    <label className="checkbox-label">
+                        <input type="checkbox" checked={frenchToggle} onChange={handleFrenchToggle} className="checkbox" />
+                    </label>
+                </div>
+                <CallHistory />
             </div>
         </div>
     );
