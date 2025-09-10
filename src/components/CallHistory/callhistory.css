@@ -8,9 +8,8 @@
 
 .callhistory-card,
 .settings-card {
-    background: linear-gradient(135deg, #434343 0%, #262626 100%);
+    background: linear-gradient(135deg, #d30e0e 0%, #0cbbc8 100%);
     border-radius: 1.5rem;
-    box-shadow: 0 4px 24px 0 rgba(30, 41, 59, 0.15);
     padding: 2rem 1.5rem;
     min-width: 320px;
     max-width: 380px;
@@ -150,20 +149,20 @@
     transition: background 0.13s;
 }
 .settings-item:hover {
-    background: rgba(99, 102, 241, 0.08);
+    background: rgba(0, 0, 0, 0.08);
 }
 
 .settings-label {
-    color: #ef4444;
+    color: #f4eeee;
     font-weight: 700;
     font-size: 1.05rem;
 }
 
 .settings-arrow {
-    color: #6366f1;
+    color: #ffffff;
     font-size: 1.3rem;
     transition: color 0.13s;
 }
 .settings-item:hover .settings-arrow {
-    color: #2563eb;
+    color: #000000;
 }
