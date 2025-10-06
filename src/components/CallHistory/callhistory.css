@@ -1,0 +1,168 @@
+.callhistory-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    padding: 2rem;
+}
+
+.callhistory-card,
+.settings-card {
+    background: linear-gradient(135deg, #d30e0e 0%, #0cbbc8 100%);
+    border-radius: 1.5rem;
+    padding: 2rem 1.5rem;
+    min-width: 320px;
+    max-width: 380px;
+    transition: transform 0.18s cubic-bezier(.4,0,.2,1), box-shadow 0.18s cubic-bezier(.4,0,.2,1);
+}
+.callhistory-card:hover,
+.settings-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 32px 0 rgba(30, 41, 59, 0.22);
+}
+
+.callhistory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.callhistory-title {
+    color: #a5b4fc;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    color: #ef4444;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+.menu-icon:hover {
+    color: #b91c1c;
+}
+
+.call-box, .call-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(243, 244, 246, 0.85);
+    border-radius: 1rem;
+    padding: 0.9rem 1.2rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 4px 0 rgba(30, 41, 59, 0.06);
+    transition: box-shadow 0.15s;
+}
+.call-box:hover, .call-entry:hover {
+    box-shadow: 0 4px 12px 0 rgba(30, 41, 59, 0.13);
+}
+
+.call-box-left, .call-entry-left {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.call-icon {
+    background: linear-gradient(90deg, #6366f1 0%, #818cf8 100%);
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 1px 4px 0 rgba(99, 102, 241, 0.15);
+}
+
+.call-text-bold {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.call-time {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.call-flag {
+    font-size: 1.3rem;
+}
+
+.call-dash,
+.call-text-red,
+.call-date {
+    color: #ef4444;
+    font-weight: 700;
+}
+
+.settings-profile {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-avatar {
+    background: linear-gradient(135deg, #fb7185 0%, #fbbf24 100%);
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px 0 rgba(251, 113, 133, 0.18);
+}
+
+.profile-icon {
+    color: #fff;
+    font-size: 2.2rem;
+}
+
+.profile-name {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #f3f4f6;
+}
+
+.profile-email {
+    color: #a1a1aa;
+    font-size: 1rem;
+}
+
+.settings-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.settings-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0.7rem 0.2rem;
+    border-radius: 0.7rem;
+    transition: background 0.13s;
+}
+.settings-item:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.settings-label {
+    color: #f4eeee;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.settings-arrow {
+    color: #ffffff;
+    font-size: 1.3rem;
+    transition: color 0.13s;
+}
+.settings-item:hover .settings-arrow {
+    color: #000000;
+}
