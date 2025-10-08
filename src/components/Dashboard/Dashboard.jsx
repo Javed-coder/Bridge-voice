@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Dashboard.css";
 import Contact from "../Contacts/contact";
 import CallHistory from "../CallHistory/callhistory";
+import Settings from "../Settings/settings";
 import Home from "../LanguageSelector/languageselector";
 import About from "./About";
 
@@ -10,6 +11,7 @@ const menuItems = [
 	{ id: "about", label: "About" },
 	{ id: "contacts", label: "Contacts" },
 	{ id: "callhistory", label: "Call History" },
+	{ id: "settings", label: "Settings" } // added settings menu item
 ];
 
 const Dashboard = () => {
@@ -33,6 +35,8 @@ const Dashboard = () => {
 				return <Contact />;
 			case "callhistory":
 				return <CallHistory />;
+			case "settings":
+				return <Settings />;
 			default:
 				return <Home />;
 		}

@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./languageselector.css";
-import CallHistory from "../CallHistory/CallHistory";
-import Contacts from "../Contacts/contact";
 
 const languages = [
     { code: "en", name: "English" },
@@ -63,7 +61,6 @@ const LanguageSelector = ({ onSelect }) => {
                     <span className="bold-text label-red">{suggestedRefugee.name}</span>
                     <span className="arrow">&gt;</span>
                 </div>
-                <Contacts />
             </div>
 
             {/* Refugee Language Panel */}
@@ -87,7 +84,6 @@ const LanguageSelector = ({ onSelect }) => {
                         <input type="checkbox" checked={frenchToggle} onChange={handleFrenchToggle} className="checkbox" />
                     </label>
                 </div>
-                <CallHistory />
             </div>
         </div>
     );
